@@ -28,7 +28,7 @@ T = arm.fkine(q)   % homogent transformasjon
 %% Invers kinematikk
 qi = arm.ikine(T, "mask", [1 1 1 0 0 0])
 Ta = arm.fkine(qi)
-
+J0  = arm.jacob0(q)
 
 figure;
 arm.plot(q);
